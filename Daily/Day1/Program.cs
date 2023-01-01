@@ -7,7 +7,7 @@ using System.Linq;
 int MaxElements = 50000; 
 
 List<int> numbers = new() {
-	3, 1, 1, 3, 1, 5, 2, 1, 6, 9, 8, 1, 1, 2, 1, 1
+	3, 1, 1, 3, 1, 5, 2, 1, 6, 9, 8, 1, 1, 2, 1, 1, 1
 };
 
 // This is likely space inefficient, but satisfies O(1) space complexity.
@@ -36,4 +36,4 @@ foreach (int num in elementValues) {
 int result = elementCounts.Max();
 position = Array.IndexOf(elementCounts, result);
 
-Console.WriteLine("The majority number is: " + elementValues[position]);
+Console.WriteLine($"The most common number is: {elementValues[position]}; occuring {result} times");
