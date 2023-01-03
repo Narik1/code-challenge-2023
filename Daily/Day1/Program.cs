@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-int MaxElements = 50000; 
+int MaxElements = 50000;
 
 List<int> numbers = new() {
 	3, 1, 1, 3, 1, 5, 2, 1, 6, 9, 8, 1, 1, 2, 1, 1, 1
