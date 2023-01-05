@@ -27,6 +27,7 @@
  * •    1 <= num <= 3999
  */
 
+#include <fstream>
 #include <iostream>
 #include <map>
 #include <sstream>
@@ -62,8 +63,12 @@ std::string GetNumeral(int number, const std::map<int, std::string> &numeral_map
 }
 
 int main() {
-    std::cout << GetNumeral(3, numeral_mapping) << std::endl;
-    std::cout << GetNumeral(58, numeral_mapping) << std::endl;
+    std::ofstream numeral_file{"./roman_numerals.txt"};
+
+    for (int i = 1; i < 4000; i++) {
+        numeral_file << GetNumeral(i, numeral_mapping) << '\n';
+    }
+    numeral_file << std::flush;
 
     return EXIT_SUCCESS;
 }
