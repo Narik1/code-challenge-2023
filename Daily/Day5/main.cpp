@@ -48,7 +48,7 @@ const std::map<int, std::string> numeral_mapping {
     { 1, "I" }
 };
 
-std::string GetNumeral(int number, const std::map<int, std::string>& numeral_mapping) {
+std::string GetNumeral(int number, const std::map<int, std::string> &numeral_mapping) {
     std::stringstream builder{};
     for (auto iter = numeral_mapping.rbegin(), end = numeral_mapping.rend(); iter != end; ++iter) {
         const auto &[divider, numeral] = *iter;
@@ -62,6 +62,7 @@ std::string GetNumeral(int number, const std::map<int, std::string>& numeral_map
 }
 
 int main() {
+    std::cout << GetNumeral(3, numeral_mapping) << std::endl;
     std::cout << GetNumeral(58, numeral_mapping) << std::endl;
 
     return EXIT_SUCCESS;
