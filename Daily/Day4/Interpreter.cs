@@ -102,7 +102,7 @@ public class Interpreter
 	private void ReadInput() {
 		int input = _in.Read();
 
-		// If the input is invalid, set pointer location to 0
+		// If the input is invalid, set memory cell to 0
 		memory[instructionPointer] = input == -1 || input > 255 ? (byte)0 : (byte)input;
 	}
 
